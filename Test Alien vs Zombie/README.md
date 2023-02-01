@@ -4,7 +4,7 @@ Please introduce the game here.
 
 [Alien vs Zombie](https://user-images.githubusercontent.com/124139309/216045389-16dd8a9c-efc3-46e6-86e3-2ef2ec123a24.png)
 
-Please provide the YouTube link to your [Video Demo](https://youtube.com).
+Please provide the YouTube link to your [Video Demo](https://youtu.be/Gr0u03h5NTc).
 
 ## Compilation Instructions
 
