@@ -76,6 +76,8 @@ For example:
 
 Describe the problems encountered and provide the solutions / plan for the solutions.
 
+Problems :
+
 1. Placing Alien in the Game Dashboard
 - failure in declaration part 
 
@@ -84,3 +86,5 @@ Describe the problems encountered and provide the solutions / plan for the solut
    return *(this->_M_impl._M_start + __n); // while running the program, this above code will appear. 
    
 3. Could not put random characters into the vector array
+
+Solutions :
