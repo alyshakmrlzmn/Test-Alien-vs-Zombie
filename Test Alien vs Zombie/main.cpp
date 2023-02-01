@@ -2,13 +2,11 @@
 // Course: TCP1101 PROGRAMMING FUNDAMENTALS 
 // Year: Trimester 1, 2022/23 (T2215) 
 // Lab: TT5L
-// Names: ALYSHA NAILI BINTI KAMARULZAMAN | NUR ARISYA BINTI MOHD YASAK | MEMBER_NAME_3 
-// IDs: 1221303351 | 1221303288 | MEMBER_ID_3 
-// Emails: 1221303351@student.mmu.edu.my | 1221303288@student.mmu.edu.my | MEMBER_EMAIL_3 
-// Phones: MEMBER_PHONE_1 | MEMBER_PHONE_2 | MEMBER_PHONE_3 
+// Names: ALYSHA NAILI BINTI KAMARULZAMAN | NUR ARISYA BINTI MOHD YASAK | AZMI BIN MOHD SAHI 
+// IDs: 1221303351 | 1221303288 | 1221303866 
+// Emails: 1221303351@student.mmu.edu.my | 1221303288@student.mmu.edu.my | 1221303866@student.mmu.edu.my 
+// Phones: ALYSHA_0128050501 | ARISYA_0142175890 | AZMI_0174588593 
 // ********************************************************* 
-
-// TODO: Fill in the missing information above and delete this line.
 
 //#include "pf/helper.h"
 //#include <iostream>
@@ -20,10 +18,6 @@
     //cout << "Let's Get Started!" << endl;
     //pf::Pause();
 //}
-
-//        open in terminal
-//        g++ pf\*.cpp main.cpp -o main 
-//        ./main.exe
 
 #include <iostream>
 #include <string>
@@ -131,7 +125,17 @@ int main()
 
             std::cout << std::endl;
         }
-
-    }
-    
+ 
+        { 
+            //display Alien in board
+             
+            //map<string, int>map_;
+            //int  AlienC_= Column/2;
+            //int  AlienR_= Row/2;
+            //map_ ["A"];
+       
+        }
+ }
 }
+
+    
