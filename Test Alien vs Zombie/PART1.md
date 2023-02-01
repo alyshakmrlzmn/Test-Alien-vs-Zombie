@@ -82,5 +82,6 @@ Describe the problems encountered and provide the solutions / plan for the solut
 2. Segmentation fault 
 
    return *(this->_M_impl._M_start + __n);
-      - while running the program, this above code will appear. 
-3. 
+   - while running the program, this above code will appear. 
+   
+3. Could not put random characters into the vector array
