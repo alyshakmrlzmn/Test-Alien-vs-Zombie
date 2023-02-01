@@ -2,7 +2,7 @@
 
 Please introduce the game here.
 
-You may add one signature screenshot of your program here or above the title. Check out [this tutorial](https://www.digitalocean.com/community/tutorials/markdown-markdown-images) to learn how to do it.
+[Alien vs Zombie](https://user-images.githubusercontent.com/124139309/216045389-16dd8a9c-efc3-46e6-86e3-2ef2ec123a24.png)
 
 Please provide the YouTube link to your [Video Demo](https://youtube.com).
 
@@ -18,7 +18,7 @@ g++ main.cpp folder1\code.cpp folder2\code.cpp ......
 
 ## User Manual
 
-Please provide the user manual on how to use your program.
+Please provide the user manual on how to use your program.*
 
 Please DO NOT change the Progress Log below. Leave it as it is.
 
@@ -31,8 +31,8 @@ Please DO NOT change the Progress Log below. Leave it as it is.
 
 Please replace the following with your group members' names. 
 
-- Tony Stark
-- Steve Rogers
-- Dr. Strange
+- Alysha Naili
+- Nur Arisya
+- Azmi
 
 
