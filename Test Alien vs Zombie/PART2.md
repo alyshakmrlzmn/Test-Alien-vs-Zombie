@@ -58,23 +58,31 @@ List down the contribution of each group members.
 
 ### Alysha Naili
 
-1. Generate game board.
+1. Generate game board
 2. Game dashboard
 3. Game characters (attributes)
 4. Zombie in board
 5. Game objects
+6. Quit game
 
 ### Azmi
 
 1. Intro
-2. Customize game settings.
+2. Login user (player)
+3. Customize game settings
 
 ### Nur Arisya
 
 1. Game dashboard
 2. Game object
-3. Customize game settings.
+3. Customize game settings
+4. Quit game
 
 ## Problems Encountered & Solutions
 
-Describe the problems encountered and provide the solutions / plan for the solutions.
+Problems :
+
+1. Failed to add Alien in the gameboard
+2. Failed to add game objects if user choose yes (y)
+
+Solutions :
