@@ -4,7 +4,9 @@ Please introduce the game here.
 
 [Alien vs Zombie](https://user-images.githubusercontent.com/124139309/216045389-16dd8a9c-efc3-46e6-86e3-2ef2ec123a24.png)
 
-Please provide the YouTube link to your [Video Demo](https://youtu.be/Gr0u03h5NTc).
+Check our Video Demo!
+[Part1](https://youtu.be/Gr0u03h5NTc).
+[Part2](https://youtu.be/6OpdAqhV1hs).
 
 ## Compilation Instructions
 
@@ -18,9 +20,21 @@ g++ main.cpp folder1\code.cpp folder2\code.cpp ......
 
 ## User Manual
 
-Please provide the user manual on how to use your program.*
+SETTING UP THE GAME
 
-Please DO NOT change the Progress Log below. Leave it as it is.
+Customize your own board , from the type of the game you like to play to how much zombies you want to put in.
+
+COMMAND
+
+up     - Move up.
+down   - Move down.
+left   - Move left. 
+right  - Move right.
+arrow  - Change the direction of an arrow.
+help   - Display these user commands.
+save   - Save the game. 
+load   - Load the game.
+quit   - Quit the game.
 
 ## Progress Log
 
