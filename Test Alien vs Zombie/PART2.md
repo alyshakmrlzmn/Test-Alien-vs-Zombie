@@ -2,7 +2,7 @@
 
 ## Video Demo
 
-Please provide the YouTube link to your [Video Demo](https://youtube.com).
+Video Demo [Alien Vs Zombies](https://youtube.com).
 
 ## Minimum Requirements
 
@@ -10,41 +10,70 @@ Please provide the YouTube link to your [Video Demo](https://youtube.com).
 
 List all the features completed.
 
-1. Cool Feature #1
-2. Cool Feature #2
-3. *add more*
+1. Intro
+2. Customize Game Settings
+3. Game Dashboard
+4. Game Characters (Attributes)
+5. Zombies in Board
+6. Game Objects 
+7.  Quit Game
 
 ### To Do
 
 List all the features not yet done. Remove this section if there is no incomplete requirements.
 
-1. Cool Feature #1
-2. *add more*
+1. Alien Movement
+2. Game Commands
+3. Character's Turns
+4. Health Object
+5. Board border & Trail Reset
+6. Zombie's Movement & Attack
+7. Rock Object
+8. Skippable Gameplay
+9. Zombie Attacks Alien
+10. Pod Object
+11. Alien Accumulate Attacks
+12. Skippable Gameplay
+13. Arrow Object
+14. Alien hits Zombie
+15. Trail Reset
+16. Skippable Gameplay
+17. Alien kills Zombie and Win
+18. Play Again?
+19. Skippable Gameplay
+20. Combo Attack
+21. Skippable Gameplay
+22. Save Game (1)
+23. Save Game (2)
+24. Load Game
+25. Skippable Ending
 
 ## Additional Features
 
-Describe the additional features that has been implemented.
+Login
 
 ## Contributions
 
 List down the contribution of each group members.
 
-For example:
+### Alysha Naili
 
-### Tony Stark
+1. Generate game board.
+2. Game dashboard
+3. Game characters (attributes)
+4. Zombie in board
+5. Game objects
 
-1. Randomly generate game board.
-2. *add more*
+### Azmi
 
-### Steve Rogers
+1. Intro
+2. Customize game settings.
 
-1. Zombie movement and attack behaviour.
-2. *add more*
+### Nur Arisya
 
-### Dr. Strange
-
-1. Implement all game objects.
-2. *add more*
+1. Game dashboard
+2. Game object
+3. Customize game settings.
 
 ## Problems Encountered & Solutions
 
