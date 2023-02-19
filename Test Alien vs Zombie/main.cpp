@@ -30,22 +30,33 @@ using namespace std;
 class Board
 {
 private:
+    
     vector<vector<char>> map_; // convention to put trailing underscore
     int Column_, Row_;          // to indicate private data
 
 public:
-    Board(int Column, int Row);
-    void init(int Column, int Row);
+
+    int column, row, zombie;
+    int col_ , row_ , zom_;
+
+    Board(int column = 9, int row = 5);
+    void init(int column, int row);
     void display() const;
+    
+    void oddNums(int num_);
+    void settings(int col_, int row_, int zom_);
+    void displayGameBoard(int column, int row, int zombie);
+    void custGameBoard() const;
+
+    void setObject(int x, int y, char ch);
+    char getObject(int x, int y, int z) const;
     int getColumn() const;
     int getRow() const;
-    char getObject(int x, int y) const;
-    void setObject(int x, int y, char ch);
 };
 
 void Board::setObject(int x, int y, char ch)
 {
-    map_[-(y - 5)][x - 1] = ch;
+   map_[-(y-5)][x-1] = ch;
 }
 
 int Board::getColumn() const
@@ -56,18 +67,24 @@ int Board::getRow() const
 {
     return Row_;
 }
-Board::Board(int Column, int Row)
+
+
+Board::Board(int column, int row)
 {
-    init(Column, Row);
+    init(column, row);
 }
-void Board::init(int Column, int Row)
+
+void Board::init(int column, int row)
 {
-    Column_ = Column;
-    Row_ = Row;
+
+    Column_ = column;
+    Row_ = row;
+    
     char objects[] = {' ', ' ', ' ', ' ', ' ', ' ', '^', 'v', '<', '>' , 'h' , 'p' , 'r','.'};
     int noOfObjects = 14; // number of objects in the objects array
     // create dynamic 2D array using vector
-    map_.resize(Row_); // create empty rows
+    map_.resize(Column_); // create empty rows
+
     for (int i = 0; i < Row_; ++i)
     {
         map_[i].resize(Column_); // resize each row
@@ -81,32 +98,99 @@ void Board::init(int Column, int Row)
             map_[i][j] = objects[objNo];
         }
     }
+
+    /*int RowAlien;
+    int ColumnAlien;
+    char A;
+    A = RowAlien, ColumnAlien;
+
+    RowAlien = row/2;
+    cin >> A;
+
+    ColumnAlien = column/2;
+    cin >> A;/*/
 }
 
-int main()
+//default gameboard
+void Board::display() const
 {
-    cout << "Default Game Settings" << endl;
-    cout << "-----------------------" << endl;
-    cout << "Board Rows : 5" << endl;
-    cout << "Board Columns : 9" << endl;
-    cout << "Zombie Count : 1" << endl;
+    // comment this out during testing
+    // system("cls"); // OR system("clear"); for Linux / MacOS
+    cout << ".: Alien vs Zombie :." << endl;
 
-    string choice;
-
-    cout << "Do you wish to change the game settings (y/n)? ==>" << endl;
-    cin >> choice;
-    if (choice == "y")
+    // for each row
+    for (int i = 0; i < Row_; ++i) 
     {
+        // display upper border of the row
+        cout << " ";
+        for (int j = 0; j < Column_; ++j) 
+        {
+            cout << "+-";
+        }
+        cout << "+" << endl;
+
+        // display row number
+        cout << setw(2) << (Row_ - i);  
+
+        // display cell content and border of each column
+        for (int j = 0; j < Column_; ++j)
+        {
+            cout << "|" << map_[i][j];
+        }
+        cout << "|" << endl;
+
+    }
+
+        // display lower border of the last row
+        cout << " ";
+        for (int j = 0; j < Column_; ++j)
+        {
+            cout << "+-";
+        }
+        cout << "+" << endl;
+
+        // display column number
+        cout << " ";
+        for (int j = 0; j < Column_; ++j)
+        {
+            int digit = (j + 1) / 10;
+            cout << " ";
+            if (digit == 0)
+               cout << " ";
+            else
+               cout << digit;
+        }
+        cout << endl;
+        cout << " ";
+        
+        for (int j = 0; j < Column_; ++j)
+        {
+             cout << " " << (j + 1) % 10;
+        }
+        
+   cout << endl << endl;
+ }
+
+
+void test1_1()
+{
+    Board board;
+    board.display();
+}
+
+//customize gameboard
+void Board::custGameBoard() const      
+{     
         int Row;
         int Column;
         int Zombies;
-        //vector<vector<string>> map_; // convention to put trailing underscore
+        vector<vector<string>> map_; // convention to put trailing underscore
 
         cout << "Board Settings" << endl;
         cout << "---------------" << endl;
-        cout << "Enter rows" << endl;
+        cout << "Enter number of rows" << endl;
         cin >> Row;
-        cout << "Enter columns" << endl;
+        cout << "Enter number of columns" << endl;
         cin >> Column;
         cout << "Zombie Settings" << endl;
         cout << "-----------------" << endl;
@@ -114,28 +198,173 @@ int main()
         cin >> Zombies;
         cout << "Settings updated" << endl;
         int table[Row][Column];
-
+        
+        cout << endl;
+        map_.resize(Row,vector<string>(Column," "));
         cout << ".: Alien vs Zombie :." << endl;
-        for (int i = 0; i < Column; i++)
-        {
-            for (int j = 0; j < Row; j++)
-            {
-                std::cout << "|_|";
-            }
 
-            std::cout << std::endl;
+        for (int i = 0; i < Row; ++i)
+        {
+            cout << " ";
+            for (int j = 0; j < Column; ++j)
+            {
+               cout << "+-";
+            }
+             cout << "+" << endl;   
+             cout << setw(2)<< (Row - i);
+
+             // display cell content and border of each column
+            for (int j = 0; j < Column; ++j)
+             {
+                cout << "|" << map_[i][j];
+             }
+             cout << "|" << endl;
         }
- 
-        { 
-            //display Alien in board
-             
-            //map<string, int>map_;
-            //int  AlienC_= Column/2;
-            //int  AlienR_= Row/2;
-            //map_ ["A"];
-       
-        }
- }
+            // display lower border of the last row
+             cout << " ";
+             for (int j = 0; j < Column; ++j)
+            {
+                 cout << "+-";
+            }
+             cout << "+" << endl;
+
+             // display column number 
+             cout << " ";
+             for (int j = 0; j < Column; ++j)
+            {
+                int digit = (j + 1) / 10;
+                cout << " ";
+                if ( digit == 0)
+                    cout <<  " ";
+                else
+                    cout << digit;
+             }
+            cout << endl;
+            cout << " ";
+            for ( int j = 0; j < Column; ++j)
+            {
+                cout << " " << ( j + 1 ) % 10;
+            }
+            cout << endl
+                 << endl;
+            
+            Board board;
+            board.init(column, row);
 }
 
+void test1_2()
+{
+    Board board;
+    board.custGameBoard();
+}
+
+
+void Board::oddNums(int num_) // to only get odd numbers
+{
+    do
+    { 
+       cin >> num_;
+       if (num_ %  2 != 0)
+       {
+           break;
+       }
+        else
+       {
+           cout << "Enter ODD NUMBERS only =>  ";
+       }
+    }while (num_ % 2 == 0);
+    return;
+}
+
+//change gameboard settings
+void Board::settings(int col_, int row_, int zom_)
+{
+        
+        cout << "  Board Settings  " << endl;
+        cout << "-------------------" << endl;
+        cout << "Please enter odd numbers only..." << endl;
+
+        cout << "Enter number of rows : " << endl;
+        oddNums(row);
+        cout << "Enter number of columns : " << endl;
+        oddNums(column);
+        cout << endl;
+
+        cout << "  Zombie Settings  " << endl;
+        cout << "-------------------" << endl;
+        cout << "Enter number of zombies : " << endl;
+        cin >> zom_;
+        cout << endl;
+
+        cout << "Settings Updated" << endl;
+
+        
+}
+
+//gameboard settings
+void Board::displayGameBoard(int column, int row, int zombie)
+{   
     
+    char username[15];
+
+    cout << "\t Welcome to Alien vs Zombie" << endl;
+    cout << "\t Enter your username >>" << endl;
+    cin >> username;
+
+    cout << "\t Hello,signed in as "  << username << endl;
+    cout << endl;
+    cout << "\t Let's get started!"<< endl;
+
+    string choice;
+    cout << endl;
+    
+    cout << "Default Game Settings" << endl;
+    cout << "-----------------------" << endl;
+    cout << "Board Rows : 5" << endl;
+    cout << "Board Columns : 9" << endl;
+    cout << "Zombie Count : 1" << endl;
+
+    cout << "Do you wish to change the game settings (y/n)? ==>  ";
+
+    cin >> choice;
+    cout << endl;
+
+    if (choice == "y")
+    {
+        test1_2();
+        Board board;
+        board.init(column,row);
+    }
+        
+    else if (choice == "n")
+    {
+        cout << " Default Settings Maintained. " << endl;  
+        test1_1();  
+        
+    }
+
+    else
+    {
+        cout << "Error! Please choose either y (yes) or n (no)." << endl;
+        cout << endl;
+        displayGameBoard(column, row, zombie); 
+        cout << endl;
+    }
+    cout << endl;
+}
+
+
+int main()
+{
+   int row;
+   int column;
+   int zombie;
+
+   Board board; 
+   board.displayGameBoard(row, column, zombie);
+
+   //srand(1); // use this for fixed map during testing 
+   // srand(time(NULL)); // try this for random map
+   
+}
+
