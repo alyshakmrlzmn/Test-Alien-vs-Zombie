@@ -47,6 +47,7 @@ public:
     void settings(int col_, int row_, int zom_);
     void displayGameBoard(int column, int row, int zombie);
     void custGameBoard() const;
+    void quitGame() const;
 
     void setObject(int x, int y, char ch);
     char getObject(int x, int y, int z) const;
@@ -258,6 +259,29 @@ void test1_2()
     board.custGameBoard();
 }
 
+void Board::quitGame() const
+{
+   char userDecide;
+
+   cout << "Quit the game? (y/n) " << endl;
+   cin >> userDecide;
+   if (userDecide == 'y' || userDecide == 'Y')
+   {
+      // Save game data
+   }
+   else if (userDecide == 'n' || userDecide == 'N')
+   {
+      // gameEnd = false;
+   }
+}
+
+void test1_3()
+{
+    Board board;
+    board.quitGame();
+}
+
+
 
 void Board::oddNums(int num_) // to only get odd numbers
 {
@@ -331,16 +355,16 @@ void Board::displayGameBoard(int column, int row, int zombie)
 
     if (choice == "y")
     {
-        test1_2();
-        Board board;
-        board.init(column,row);
+        test1_2();      //Board board;
+                        //board.init(column,row);
+        test1_3();
     }
         
     else if (choice == "n")
     {
         cout << " Default Settings Maintained. " << endl;  
         test1_1();  
-        
+        test1_3();
     }
 
     else
@@ -349,6 +373,7 @@ void Board::displayGameBoard(int column, int row, int zombie)
         cout << endl;
         displayGameBoard(column, row, zombie); 
         cout << endl;
+        test1_3();
     }
     cout << endl;
 }
@@ -366,5 +391,7 @@ int main()
    //srand(1); // use this for fixed map during testing 
    // srand(time(NULL)); // try this for random map
    
+   test1_3();
+
 }
 
