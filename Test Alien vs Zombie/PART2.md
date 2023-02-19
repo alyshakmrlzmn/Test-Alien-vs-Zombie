@@ -2,7 +2,7 @@
 
 ## Video Demo
 
-Video Demo [Alien Vs Zombies](https://youtube.com).
+Check this out! Our Video Demo [Alien Vs Zombies]([https://youtube.com](https://youtu.be/6OpdAqhV1hs)).
 
 ## Minimum Requirements
 
