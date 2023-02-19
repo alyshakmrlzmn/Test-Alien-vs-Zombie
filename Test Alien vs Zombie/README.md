@@ -1,12 +1,13 @@
 # Alien vs. Zombie
 
-Please introduce the game here.
+In this game, the player navigates an alien on a path to destroy robots. It combines several elements of role- 
+playing game, puzzle, path-planning, and strategy to provide a unique gaming experience.
 
 [Alien vs Zombie](https://user-images.githubusercontent.com/124139309/216045389-16dd8a9c-efc3-46e6-86e3-2ef2ec123a24.png)
 
 Check our Video Demo!
-[Part1](https://youtu.be/Gr0u03h5NTc).
-[Part2](https://youtu.be/6OpdAqhV1hs).
+[Part1](https://youtu.be/Gr0u03h5NTc) &
+[Part2](https://youtu.be/6OpdAqhV1hs)
 
 ## Compilation Instructions
 
