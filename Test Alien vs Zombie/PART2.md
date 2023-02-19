@@ -50,7 +50,7 @@ List all the features not yet done. Remove this section if there is no incomplet
 
 ## Additional Features
 
-Login
+1. Login user (player)
 
 ## Contributions
 
